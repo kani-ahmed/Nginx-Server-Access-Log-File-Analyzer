@@ -1,0 +1,95 @@
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+        margin-right: 10px;
+    }
+
+    .filter-container {
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th,
+    td {
+        font-size: 0.8rem;
+        /* Adjust this value to fit the table content */
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #2c3e50;
+        color: #ffffff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #bdc3c7;
+    }
+
+    .chart-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .chart-container {
+        flex-basis: 30%;
+        padding: 10px;
+    }
+
+    /* Add custom styles for the pagination */
+    #pagination {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+
+    #pagination a {
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 10px;
+        margin: 0 4px 4px 0;
+        text-decoration: none;
+        color: #fff;
+        background-color: #343a40;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        transform: skew(-20deg);
+    }
+
+    #pagination a:hover,
+    #pagination a:focus {
+        transform: skew(-20deg) translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    #pagination .active {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    #pagination .disabled {
+        color: #fff;
+        background: #a9a9a9;
+        box-shadow: none;
+        pointer-events: none;
+    }
