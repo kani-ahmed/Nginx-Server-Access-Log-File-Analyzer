@@ -20,11 +20,21 @@ The user interface is implemented using HTML, CSS, and JavaScript. The page make
 
 To use this application, you need to have a web server access log file in the Combined Log Format or a compatible format. You can configure the path to the log file in the scripts.
 
-To run the application, you need to have a web server that supports PHP 7 or later. You can simply clone this repository to a directory under your web server's document root and access the index.php file from your web browser.
+To run the application, you need to have a web server that supports PHP 7 or later. You can simply clone this repository to a directory of the server nginx is running on. Apache should have the same file format, I suppose.
 
-Usage
+**Key Feature**
+
+**IP Location Lookup:** The application uses an IP geolocation API to obtain location information for each IP address in the access log. This information is displayed in the access log table and is used to generate charts showing requests by country and requests by IP address. 
+
+**Catching**: To minimize the number of location lookups, I am catching the location data for each ip till expiry time is reached. This will help using free location lookup websites without hitting their monthly free benchmark.
+
+**Sorting and Filtering:** The access log table can be sorted by clicking on the headers of each column. Additionally, the table can be filtered by IP address, country, city, and region using a search bar.
+**Pagination:** The access log table is paginated to improve performance and make it easier to navigate. Users can choose how many rows to display per page, and can navigate between pages using a pagination bar.
+
+**Usage**
 
 Viewing statistics
+
 The application shows you three charts with the following statistics:
 
 Requests by IP address
